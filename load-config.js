@@ -9,7 +9,7 @@ function load (configFilepath) {
   var yml = parseFile(configFilepath) || {}
 
   return {
-    unit: yml.units || process.env.OWM_UNITS,
+    units: yml.units || process.env.OWM_UNITS,
     lang: yml.lang || process.env.OWM_LANG,
     id: yml.id || process.env.OWM_ID,
     q: yml.q || process.env.OWM_Q,
