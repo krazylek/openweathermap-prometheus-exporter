@@ -10,7 +10,7 @@ test('parsing a yaml file is ok', function (t) {
     units: 'metrics',
     lang: 'fr',
     mode: 'json',
-    id: [1,2],
+    id: [1, 2]
   }
   var config = loadConfig.parseFile(filepath)
   t.deepEqual(config, expectedConfig)

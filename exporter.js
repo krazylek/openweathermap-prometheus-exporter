@@ -1,6 +1,6 @@
 var dedent = require('dedent')
 
-module.exports = function(...results) {
+module.exports = function (...results) {
   return dedent`
     # TYPE weather_info gauge
     # HELP weather_info Information about the location; the value equals the id of the location
@@ -30,7 +30,7 @@ module.exports = function(...results) {
   `.concat(results.map(getMetrics))
 }
 
-function getMetrics(json) {
+function getMetrics (json) {
   return dedent`
     weather_info{location="${json.name}",country="${json.sys.country}"} ${json.id}
 

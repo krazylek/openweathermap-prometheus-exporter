@@ -17,7 +17,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node ./bin/server.js",
-    "test": "tape test/*.js"
+    "syntax": "standard",
+    "test": "standard && tape test/*.js"
   },
   "author": {
     "name": "Benoit Pohl",
