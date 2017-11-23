@@ -2,11 +2,12 @@ var owm = require('openweathermap')
 var exporter = require('./exporter')
 
 module.exports = function (options, cb) {
+  var toMetrics = exporter(options)
   owm.now(getOwmOptions(options), (err, data) => {
     if (err) { return cb(err) }
     if (data.cod !== 200) return cb(data.message)
 
-    var metrics = exporter(data)
+    var metrics = toMetrics(data)
     cb(null, metrics)
   })
 }
