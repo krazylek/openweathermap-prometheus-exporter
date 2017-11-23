@@ -1,0 +1,7 @@
+pipeline: 
+  build:
+    image: node:alpine
+    commands:
+      - npm install
+      - npm test
+    secrets: owm_appid

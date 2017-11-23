@@ -1,0 +1,8 @@
+Usage: owm-exporter [config file] {OPTIONS}
+
+Standard Options:
+
+       --port, -p  Select port for the metric server
+                   default 9091
+
+       --help, -h  Show this message

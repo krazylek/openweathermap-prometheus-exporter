@@ -1,0 +1,38 @@
+{
+  "name": "openweathermap-prometheus-exporter",
+  "version": "0.0.0",
+  "description": "OpenWeatherMap API exporter for prometheus timeseries db",
+  "keywords": [
+    "openweathermap",
+    "prometheus",
+    "metrics"
+  ],
+  "bin": {
+    "owm-exporter": "bin/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/krazylek/openweathermap-prometheus-exporter.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./bin/server.js",
+    "test": "tape test/*.js"
+  },
+  "author": {
+    "name": "Benoit Pohl",
+    "url": "http://pohl.fr"
+  },
+  "dependencies": {
+    "dedent": "^0.7.0",
+    "dotenv": "^4.0.0",
+    "js-yaml": "^3.10.0",
+    "minimist": "^1.2.0",
+    "openweathermap": "^1.0.0",
+    "tape": "^4.8.0"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "standard": "^10.0.3"
+  }
+}
