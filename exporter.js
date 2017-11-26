@@ -30,8 +30,7 @@ module.exports = function (options = {}) {
       # HELP weather_sun_epoch
       # TYPE weather_pressure_hectopascal gauge
       # HELP weather_pressure_hectopascal
-
-    `.concat(results.map(getMetrics))
+    `.concat('\n\n', results.map(getMetrics))
   }
 
   function getMetrics (json) {
